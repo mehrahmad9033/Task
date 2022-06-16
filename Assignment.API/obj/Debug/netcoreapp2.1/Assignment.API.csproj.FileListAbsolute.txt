@@ -11,3 +11,13 @@ D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Assignm
 D:\Learning\Assignment\Assignment\Assignment.API\obj\Debug\netcoreapp2.1\Assignment.API.RazorTargetAssemblyInfo.cache
 D:\Learning\Assignment\Assignment\Assignment.API\obj\Debug\netcoreapp2.1\Assignment.API.dll
 D:\Learning\Assignment\Assignment\Assignment.API\obj\Debug\netcoreapp2.1\Assignment.API.pdb
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Assignment.Domain.dll
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.dll
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.pdb
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Assignment.Domain.pdb
+D:\Learning\Assignment\Assignment\Assignment.API\obj\Debug\netcoreapp2.1\Assignment.API.csprojAssemblyReference.cache
+D:\Learning\Assignment\Assignment\Assignment.API\obj\Debug\netcoreapp2.1\Assignment.API.csproj.CopyComplete
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Assignment.Application.dll
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Common.dll
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Assignment.Application.pdb
+D:\Learning\Assignment\Assignment\Assignment.API\bin\Debug\netcoreapp2.1\Common.pdb

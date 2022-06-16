@@ -1,6 +1,4 @@
 D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.deps.json
-D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.runtimeconfig.json
-D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.runtimeconfig.dev.json
 D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.dll
 D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.pdb
 D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Domain.dll
@@ -12,3 +10,7 @@ D:\Learning\Assignment\Assignment\Assignment.Infrastructure\obj\Debug\netcoreapp
 D:\Learning\Assignment\Assignment\Assignment.Infrastructure\obj\Debug\netcoreapp2.1\Assignment.Infrastructure.csproj.CopyComplete
 D:\Learning\Assignment\Assignment\Assignment.Infrastructure\obj\Debug\netcoreapp2.1\Assignment.Infrastructure.dll
 D:\Learning\Assignment\Assignment\Assignment.Infrastructure\obj\Debug\netcoreapp2.1\Assignment.Infrastructure.pdb
+D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.runtimeconfig.json
+D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Assignment.Infrastructure.runtimeconfig.dev.json
+D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Common.dll
+D:\Learning\Assignment\Assignment\Assignment.Infrastructure\bin\Debug\netcoreapp2.1\Common.pdb

@@ -21,6 +21,7 @@ namespace Assignment.Domain.Modals
         public string City { get; set; }
         public int ShareValue { get; set; }
         public int SharePrice { get; set; }
+        public int ShareQTY { get; set; }
         public string Nationality { get; set; }
         public string Email { get; set; }
         public string IDType { get; set; }

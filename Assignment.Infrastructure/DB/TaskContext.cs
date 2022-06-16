@@ -11,24 +11,17 @@ namespace Assignment.Infrastructure.DB
     public class TaskContext: DbContext
     {
         private readonly IConfiguration _configuration;
-        protected TaskContext(DbContextOptions options,IConfiguration config) : base(options)
+        public TaskContext( IConfiguration config) 
         {
             _configuration = config;
-        }
+        } 
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //if (!optionsBuilder.IsConfigured)
-            //{
-            optionsBuilder 
-            .UseSqlServer(_configuration.GetConnectionString("DefaultConnection")); 
+        { 
+            optionsBuilder
+            .UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
         }
         DbSet<Investor> Investor { get; set; }
-        DbSet<Companies> Companies { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
-
-
+        DbSet<Companies> Companies { get; set; } 
     }
 }

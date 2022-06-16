@@ -8,3 +8,4 @@ D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assi
 D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.AssemblyInfo.cs
 D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.dll
 D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.pdb
+D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.csprojAssemblyReference.cache
