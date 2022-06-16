@@ -1,0 +1,10 @@
+D:\Learning\Assignment\Assignment\Assignment.Domain\bin\Debug\netcoreapp2.1\Assignment.Domain.deps.json
+D:\Learning\Assignment\Assignment\Assignment.Domain\bin\Debug\netcoreapp2.1\Assignment.Domain.runtimeconfig.json
+D:\Learning\Assignment\Assignment\Assignment.Domain\bin\Debug\netcoreapp2.1\Assignment.Domain.runtimeconfig.dev.json
+D:\Learning\Assignment\Assignment\Assignment.Domain\bin\Debug\netcoreapp2.1\Assignment.Domain.dll
+D:\Learning\Assignment\Assignment\Assignment.Domain\bin\Debug\netcoreapp2.1\Assignment.Domain.pdb
+D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.csproj.CoreCompileInputs.cache
+D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.AssemblyInfoInputs.cache
+D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.AssemblyInfo.cs
+D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.dll
+D:\Learning\Assignment\Assignment\Assignment.Domain\obj\Debug\netcoreapp2.1\Assignment.Domain.pdb
