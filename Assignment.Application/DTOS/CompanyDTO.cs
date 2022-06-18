@@ -9,6 +9,6 @@ namespace Assignment.Application.DTOS
     {
         public int CompanyID { get; set; }
         public string CompanyName { get; set; }
-        public ResponseObj Response { get; set; }
+        //public ResponseObj Response { get; set; }
     }
 }

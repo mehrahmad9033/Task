@@ -17,6 +17,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MediatR;
+using Assignment.Domain.Modals;
+using AutoMapper;
+
 namespace Assignment.API
 {
     public class Startup
@@ -36,13 +39,19 @@ namespace Assignment.API
                 client.Database.EnsureCreated();
             }
             //services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateInvestorValidator>());
-            services.AddDbContext<TaskContext>();
-
+            services.AddDbContext<TaskContext>(); 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1); 
             services.AddScoped<IGenericCDURepository<Assignment.Application.DTOS.CompanyDTO>, GenericCDURepository<Assignment.Application.DTOS.CompanyDTO>>();
             services.AddScoped<IGenericCDURepository<InvestorDTO>, GenericCDURepository<InvestorDTO>>();
+            services.AddScoped<IGenericCDURepository<Companies>, GenericCDURepository<Companies>>();
+            services.AddScoped<IGenericReadRepository<Companies>, GenericReadRepository<Companies>>();
+            services.AddScoped<IGenericCDURepository<Investor>, GenericCDURepository<Investor>>();
+            services.AddScoped<IGenericReadRepository<Investor>, GenericReadRepository<Investor>>();
+
             services.AddScoped<ICompanyService, CompanyService>();
-            services.AddScoped<IInvestorService, InvestorService>(); 
+            services.AddScoped<IInvestorService, InvestorService>();
+            //services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PersonValidator>());
+            services.AddAutoMapper();
             services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen();
         }

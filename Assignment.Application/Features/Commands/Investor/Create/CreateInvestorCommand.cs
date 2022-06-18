@@ -1,4 +1,5 @@
 ﻿using Assignment.Application.DTOS;
+using Common.SharedModels;
 using FluentValidation;
 using MediatR;
 using System;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace Assignment.Application.Features.Commands.Investor.Create
 {
-    public class CreateInvestorCommand : InvestorDTO, IRequest<List<InvestorDTO>>
+    public class CreateInvestorCommand : InvestorDTO, IRequest<ResponseObj>
     {
     }
     public class CreateInvestorCommandValidator : AbstractValidator<InvestorDTO>

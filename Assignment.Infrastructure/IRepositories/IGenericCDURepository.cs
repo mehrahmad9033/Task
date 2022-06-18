@@ -12,7 +12,7 @@ namespace Assignment.Infrastructure.IRepositories
         Task<ResponseObj> Add(T entity);
         Task<ResponseObj> Update(T entity);
         Task<ResponseObj> AddRange(IEnumerable<T> entities);
-        Task<ResponseObj> Remove(T entity);
+        Task<ResponseObj> Remove(int Key);
         Task<ResponseObj> RemoveRange(IEnumerable<T> entities);
     }
 }

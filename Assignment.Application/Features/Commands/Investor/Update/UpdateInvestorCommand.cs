@@ -1,4 +1,5 @@
 ﻿using Assignment.Application.DTOS;
+using Common.SharedModels;
 using FluentValidation;
 using MediatR;
 using System;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace Assignment.Application.Features.Commands.Investor.Update
 {
-    public class UpdateInvestorCommand : InvestorDTO, IRequest<List<InvestorDTO>>
+    public class UpdateInvestorCommand : InvestorDTO, IRequest<ResponseObj>
     {
     }
     public class UpdateInvestorCommandValidator : AbstractValidator<InvestorDTO>

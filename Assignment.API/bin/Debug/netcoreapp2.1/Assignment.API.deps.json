@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "4545b704a578b5e572b6bb42dc34d077e7dc576f"
+    "signature": "fd6343b2e28fd82bda9a3d14272531a3ef74d1ef"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,8 @@
         "dependencies": {
           "Assignment.Application": "1.0.0",
           "Assignment.Infrastructure": "1.0.0",
-          "FluentValidation.AspNetCore": "9.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
+          "FluentValidation.AspNetCore": "9.5.4",
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
@@ -45,42 +46,71 @@
           "Assignment.API.dll": {}
         }
       },
-      "FluentValidation/9.0.1": {
+      "AutoMapper/7.0.1": {
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "FluentValidation/9.5.4": {
         "runtime": {
           "lib/netstandard2.0/FluentValidation.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.1.0"
+            "fileVersion": "9.5.4.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentValidation.dll": {}
         }
       },
-      "FluentValidation.AspNetCore/9.0.1": {
+      "FluentValidation.AspNetCore/9.5.4": {
         "dependencies": {
-          "FluentValidation": "9.0.1",
-          "FluentValidation.DependencyInjectionExtensions": "9.0.1",
-          "Microsoft.AspNetCore.Mvc": "2.1.1"
+          "FluentValidation": "9.5.4",
+          "FluentValidation.DependencyInjectionExtensions": "9.5.4",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.1.1"
         },
         "runtime": {
           "lib/netcoreapp2.1/FluentValidation.AspNetCore.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.1.0"
+            "fileVersion": "9.5.4.0"
           }
         },
         "compile": {
           "lib/netcoreapp2.1/FluentValidation.AspNetCore.dll": {}
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/9.0.1": {
+      "FluentValidation.DependencyInjectionExtensions/9.5.4": {
         "dependencies": {
-          "FluentValidation": "9.0.1",
+          "FluentValidation": "9.5.4",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
         },
         "runtime": {
           "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.1.0"
+            "fileVersion": "9.5.4.0"
           }
         },
         "compile": {
@@ -854,10 +884,12 @@
           "lib/netstandard2.0/System.Text.Json.dll": {}
         }
       },
+      "System.ValueTuple/4.5.0": {},
       "Assignment.Application/1.0.0": {
         "dependencies": {
           "Assignment.Infrastructure": "1.0.0",
-          "FluentValidation.AspNetCore": "9.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
+          "FluentValidation.AspNetCore": "9.5.4",
           "MediatR": "9.0.0"
         },
         "runtime": {
@@ -2141,7 +2173,7 @@
           "System.Threading.Tasks": "4.3.0",
           "System.Threading.Tasks.Parallel": "4.3.0",
           "System.Threading.Thread": "4.3.0",
-          "System.ValueTuple": "4.3.0",
+          "System.ValueTuple": "4.5.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath.XDocument": "4.3.0",
@@ -3607,14 +3639,6 @@
         },
         "compileOnly": true
       },
-      "System.ValueTuple/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compileOnly": true
-      },
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -3725,26 +3749,40 @@
       "serviceable": false,
       "sha512": ""
     },
-    "FluentValidation/9.0.1": {
+    "AutoMapper/7.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GeF+cPknUFFJ5FkCybmQShaXWwJowBuJozgns6In37wiP2zOWx+kdNPBAN9BlDyhcORdxtXeGnkLZ+OFT85onQ==",
-      "path": "fluentvalidation/9.0.1",
-      "hashPath": "fluentvalidation.9.0.1.nupkg.sha512"
+      "sha512": "sha512-6xHbhsW09sWjjYuE1sqhYn25PQzB6UEUVPME5uhlaIz2NR2+L3+FGbVxvknJKug1BLp6VTLxDb5RcGXKMm0ieQ==",
+      "path": "automapper/7.0.1",
+      "hashPath": "automapper.7.0.1.nupkg.sha512"
     },
-    "FluentValidation.AspNetCore/9.0.1": {
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7DlvStNVZwSAbLC5GyT3nGa8K11hb9R+W6BgnYnSjvnPFGWKpyANwuGTl8HShOInjXJqIJykqHo1UcdemTq/7g==",
-      "path": "fluentvalidation.aspnetcore/9.0.1",
-      "hashPath": "fluentvalidation.aspnetcore.9.0.1.nupkg.sha512"
+      "sha512": "sha512-7MIq6D/ax3964iHXbL1L2ldUvl6IlKp0p1GZFzr6vlIhEVyp4CgJwOpisRLvIO7dP+kDtbY3Hb9yuPNCkfyBFg==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
     },
-    "FluentValidation.DependencyInjectionExtensions/9.0.1": {
+    "FluentValidation/9.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-h71E7XXjFJZsIs6s7AJz2uF4g2BTmEJk3mTKviVRtXuAUF9yV3B7glZjIpEncV6i4u7caqFixKeVpSBB3jVL9w==",
-      "path": "fluentvalidation.dependencyinjectionextensions/9.0.1",
-      "hashPath": "fluentvalidation.dependencyinjectionextensions.9.0.1.nupkg.sha512"
+      "sha512": "sha512-dnAz4PUtSSa+8EGWDUmEZujOa9rvzxln4BgokZZfO2Gbcj0612TMISU4vkvL60qIy5DI/sDF9Oy1iMXr7sJW3A==",
+      "path": "fluentvalidation/9.5.4",
+      "hashPath": "fluentvalidation.9.5.4.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/9.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nb6RUGLlnMz0Ay/ihDqjagC/Rd2pg24qdxoPDLed5grCaHx6cXBmyzLqCCzGTtvpYS4i9bOwNvhbpRkXhV+VIA==",
+      "path": "fluentvalidation.aspnetcore/9.5.4",
+      "hashPath": "fluentvalidation.aspnetcore.9.5.4.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jn1fxwhWJ20FJGYDJ1roozCBtnohtSIy//H/KTGgKBNriS7fUp9fTGs2GnTajK+Ei5k8UO1TUcPx6wBGEb32Zw==",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.5.4",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.9.5.4.nupkg.sha512"
     },
     "MediatR/9.0.0": {
       "type": "package",
@@ -4095,6 +4133,13 @@
       "sha512": "sha512-4F8Xe+JIkVoDJ8hDAZ7HqLkjctN/6WItJIzQaifBwClC7wmoLSda/Sv2i6i1kycqDb3hWF4JCVbpAweyOKHEUA==",
       "path": "system.text.json/4.6.0",
       "hashPath": "system.text.json.4.6.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "Assignment.Application/1.0.0": {
       "type": "project",
@@ -5851,13 +5896,6 @@
       "sha512": "sha512-OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
       "path": "system.threading.thread/4.3.0",
       "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
-    },
-    "System.ValueTuple/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
-      "path": "system.valuetuple/4.3.0",
-      "hashPath": "system.valuetuple.4.3.0.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",

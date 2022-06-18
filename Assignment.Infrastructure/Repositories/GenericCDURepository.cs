@@ -1,6 +1,7 @@
 ﻿using Assignment.Infrastructure.DB;
 using Assignment.Infrastructure.IRepositories; 
 using Common.SharedModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,6 +22,7 @@ namespace Assignment.Infrastructure.Repositories
             try
             {
                 _context.Set<T>().Add(entity);
+                _context.SaveChanges();
                 return new ResponseObj()
                 {
                     Status = true,
@@ -34,8 +36,7 @@ namespace Assignment.Infrastructure.Repositories
                     Description = ex.Message,
                     Status = false
                 };
-            }
-             
+            } 
         }
 
         public async Task<ResponseObj> AddRange(IEnumerable<T> entities)
@@ -43,6 +44,7 @@ namespace Assignment.Infrastructure.Repositories
             try
             {
                 _context.Set<T>().AddRange(entities);
+                _context.SaveChanges();
                 return new ResponseObj()
                 {
                     Status = true,
@@ -60,11 +62,21 @@ namespace Assignment.Infrastructure.Repositories
            
         }
 
-        public async Task<ResponseObj> Remove(T entity)
+        public async Task<ResponseObj> Remove(int Key)
         {
             try
             {
-                _context.Set<T>().Remove(entity);
+                var entity = await _context.Set<T>().FindAsync(Key);
+                if (entity == null)
+                {
+                    return new ResponseObj()
+                    {
+                        Description = "Data object not available",
+                        Status = false
+                    };
+                }
+                _context.Set<T>().Remove(entity); 
+                _context.SaveChanges();
                 return new ResponseObj()
                 {
                     Status = true,
@@ -87,6 +99,7 @@ namespace Assignment.Infrastructure.Repositories
             try
             {
                 _context.Set<T>().RemoveRange(entities);
+                _context.SaveChanges();
                 return new ResponseObj()
                 {
                     Status = true,
@@ -108,12 +121,8 @@ namespace Assignment.Infrastructure.Repositories
         {
             try
             {
-                T existing = _context.Set<T>().Find(entity);
-                if (existing != null)
-                {
-                    _context.Entry(existing).CurrentValues.SetValues(entity);
-                    _context.SaveChanges();
-                }
+                _context.Entry(entity).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
 
                 return new ResponseObj()
                 {

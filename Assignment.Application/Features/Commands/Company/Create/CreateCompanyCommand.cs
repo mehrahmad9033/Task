@@ -9,9 +9,10 @@ using System.Text;
 namespace Assignment.Application.Features.Commands.Company.Create
 {
     public class CreateCompanyCommand : CompanyDTO,IRequest<ResponseObj>
-    { 
+    {
+        public string LoggedInUserId { get; set; }
     }
-    public class CreateCompanyCommandValidator : AbstractValidator<CompanyDTO>
+    public class CreateCompanyCommandValidator : AbstractValidator<CreateCompanyCommand>
     {
         public CreateCompanyCommandValidator()
         {
